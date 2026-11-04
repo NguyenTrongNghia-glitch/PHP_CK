@@ -19,6 +19,8 @@ include "../includes/header.php";
 
     <h1>Danh sách đơn hàng</h1>
 
+    <a href="revenue.php" class="btn">Doanh thu</a>
+
 </div>
 
 
@@ -33,6 +35,7 @@ include "../includes/header.php";
                 <th>Khách hàng</th>
                 <th>Ngày đặt</th>
                 <th>Tổng tiền</th>
+                <th>Thanh toán</th>
                 <th>Trạng thái</th>
                 <th>Chi tiết</th>
             </tr>
@@ -52,6 +55,8 @@ include "../includes/header.php";
                     <td><?= e($order["created_at"]) ?></td>
 
                     <td><?= money($order["total_price"]) ?></td>
+
+                    <td><?= e($order["payment_method"]) ?></td>
 
                     <td><?= e($order["status"]) ?></td>
 
